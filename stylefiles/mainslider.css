@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.contain {
+    position: relative;
+    overflow: hidden; /* Hides overflow from images */
+}
+
+.imgs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures images fill the container width */
+    height: 100%; /* Ensures images fill the container height */
+    object-fit: fill; /* Maintains aspect ratio and covers entire area */
+    opacity: 0; /* Start with invisible images */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+}
+
+.imgs.active {
+    opacity: 1; /* Only active image is visible */
+}
